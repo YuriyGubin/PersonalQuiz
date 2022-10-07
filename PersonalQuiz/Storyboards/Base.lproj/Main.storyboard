@@ -235,7 +235,7 @@
                                 <rect key="frame" x="0.0" y="92.5" width="320" height="4"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfq-Oy-rcH">
-                                <rect key="frame" x="16" y="101.5" width="288" height="24"/>
+                                <rect key="frame" x="16" y="102.5" width="288" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -329,7 +329,13 @@
                             <constraint firstItem="sGH-r2-yiP" firstAttribute="trailing" secondItem="F58-h2-kgW" secondAttribute="trailing" constant="16" id="z5n-8W-tp9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Результат" id="GrK-CL-gw3"/>
+                    <navigationItem key="navigationItem" title="Результат" id="GrK-CL-gw3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="HRQ-oE-Nzv">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="Eey-I8-3PS" id="N6J-8a-xY3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0cO-G2-bpx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

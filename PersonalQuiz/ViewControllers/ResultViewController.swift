@@ -11,9 +11,9 @@ class ResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
-
-
+    @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
+        navigationController?.dismiss(animated: true)
+    }
 }
