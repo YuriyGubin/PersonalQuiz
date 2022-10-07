@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		6A576CEB28EF1F6C002ED31E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A576CEA28EF1F6C002ED31E /* AppDelegate.swift */; };
 		6A576CED28EF1F6C002ED31E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A576CEC28EF1F6C002ED31E /* SceneDelegate.swift */; };
-		6A576CEF28EF1F6C002ED31E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A576CEE28EF1F6C002ED31E /* ViewController.swift */; };
+		6A576CEF28EF1F6C002ED31E /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A576CEE28EF1F6C002ED31E /* QuestionsViewController.swift */; };
 		6A576CF228EF1F6C002ED31E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A576CF028EF1F6C002ED31E /* Main.storyboard */; };
 		6A576CF428EF1F6E002ED31E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A576CF328EF1F6E002ED31E /* Assets.xcassets */; };
 		6A576CF728EF1F6E002ED31E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A576CF528EF1F6E002ED31E /* LaunchScreen.storyboard */; };
 		6A576D0328EF466D002ED31E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A576D0228EF466D002ED31E /* Question.swift */; };
+		6A9E956628F0345F00F5D0B0 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9E956528F0345F00F5D0B0 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6A576CE728EF1F6C002ED31E /* PersonalQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A576CEA28EF1F6C002ED31E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A576CEC28EF1F6C002ED31E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6A576CEE28EF1F6C002ED31E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6A576CEE28EF1F6C002ED31E /* QuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		6A576CF128EF1F6C002ED31E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A576CF328EF1F6E002ED31E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A576CF628EF1F6E002ED31E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A576CF828EF1F6E002ED31E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6A576D0228EF466D002ED31E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		6A9E956528F0345F00F5D0B0 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,8 @@
 		6A576CFF28EF318C002ED31E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6A576CEE28EF1F6C002ED31E /* ViewController.swift */,
+				6A576CEE28EF1F6C002ED31E /* QuestionsViewController.swift */,
+				6A9E956528F0345F00F5D0B0 /* ResultViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -173,7 +176,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A576CEF28EF1F6C002ED31E /* ViewController.swift in Sources */,
+				6A9E956628F0345F00F5D0B0 /* ResultViewController.swift in Sources */,
+				6A576CEF28EF1F6C002ED31E /* QuestionsViewController.swift in Sources */,
 				6A576D0328EF466D002ED31E /* Question.swift in Sources */,
 				6A576CEB28EF1F6C002ED31E /* AppDelegate.swift in Sources */,
 				6A576CED28EF1F6C002ED31E /* SceneDelegate.swift in Sources */,
