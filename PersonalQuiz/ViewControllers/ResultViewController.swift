@@ -33,24 +33,11 @@ class ResultViewController: UIViewController {
 // MARK: - Private Methods
 extension ResultViewController {
     private func calculateChosenAnimals() {
-        for answer in answers {
-            switch answer.animal {
-            case .dog:
-                dogCount += 1
-            case .cat:
-                catCount += 1
-            case .rabbit:
-                rabbitCount += 1
-            case .turtle:
-                turtleCount += 1
-            }
+        var chosenAnimals: [Animal: Int] = [:]
+        let animals = answers.map { $0.animal }
+        for animal in animals {
+            chosenAnimals[animal] = (chosenAnimals[animal] ?? 0) + 1
         }
-        let chosenAnimals: [Animal: Int] = [
-            .dog: dogCount,
-            .cat: catCount,
-            .rabbit: rabbitCount,
-            .turtle: turtleCount
-        ]
         if let yourAnimal = chosenAnimals.sorted(by: { $0.value > $1.value }).first?.key {
             animalLabel.text = "Вы - \(yourAnimal.rawValue)"
             descriptionLabel.text = yourAnimal.definition
