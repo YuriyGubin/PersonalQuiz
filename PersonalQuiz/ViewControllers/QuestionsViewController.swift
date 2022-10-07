@@ -27,10 +27,25 @@ class QuestionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
     }
 
 
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
     }
+    
+    @IBAction func multipleAnswerButtonPressed() {
+    }
+    
+    @IBAction func rangedAnswerButtonPressed() {
+    }
 }
 
+//MARK: - Private Methods
+extension QuestionsViewController {
+    private func updateUI() {
+        for stackView in [singleStackView, multipleStackView, rangedStackView] {
+            stackView?.isHidden.toggle()
+        }
+    }
+}

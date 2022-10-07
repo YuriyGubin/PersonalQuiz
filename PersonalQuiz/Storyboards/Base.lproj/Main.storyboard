@@ -191,7 +191,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40b-5i-QMN">
                                         <rect key="frame" x="0.0" y="188" width="288" height="34.5"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
+                                        <connections>
+                                            <action selector="multipleAnswerButtonPressed" destination="DEF-Ws-jZv" eventType="touchUpInside" id="uqp-yn-E89"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -221,7 +224,10 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biE-vG-fJD">
                                         <rect key="frame" x="0.0" y="101" width="288" height="34.5"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Ответить"/>
+                                        <connections>
+                                            <action selector="rangedAnswerButtonPressed" destination="DEF-Ws-jZv" eventType="touchUpInside" id="SeT-Xx-5xh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
