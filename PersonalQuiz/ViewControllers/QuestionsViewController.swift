@@ -24,8 +24,9 @@ class QuestionsViewController: UIViewController {
     @IBOutlet var rangedLabels: [UILabel]!
     
     private let questions = Question.getQuestions()
+    private var answersChosen: [Answer] = []
     private var questionIndex = 0
-    private var answers: [Answer] {
+    private var currentAnswers: [Answer] {
         questions[questionIndex].answers
     }
 
@@ -36,9 +37,20 @@ class QuestionsViewController: UIViewController {
 
 
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
+        guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
+        let currentAnswer = currentAnswers[buttonIndex]
+        answersChosen.append(currentAnswer)
+        
+        nextQuestion()
     }
     
     @IBAction func multipleAnswerButtonPressed() {
+        for (multipleSwith, answer) in zip(multipleSwitches, currentAnswers) {
+            if multipleSwith.isOn {
+                answersChosen.append(answer)
+            }
+        }
+        nextQuestion()
     }
     
     @IBAction func rangedAnswerButtonPressed() {
@@ -50,7 +62,7 @@ extension QuestionsViewController {
     private func updateUI() {
         // Hide everything
         for stackView in [singleStackView, multipleStackView, rangedStackView] {
-            stackView?.isHidden.toggle()
+            stackView?.isHidden = true
         }
         
         // Get current question
@@ -75,9 +87,9 @@ extension QuestionsViewController {
         switch type {
             
         case .single:
-            showSingleStackView(with: answers)
+            showSingleStackView(with: currentAnswers)
         case .multiple:
-            break
+            showMultipleStackView(with: currentAnswers)
         case .range:
             break
         }
@@ -90,5 +102,24 @@ extension QuestionsViewController {
             button.setTitle(answer.title, for: .normal)
         }
        
+    }
+    
+    private func showMultipleStackView(with answers: [Answer]) {
+        multipleStackView.isHidden.toggle()
+        
+        for (label, answer) in zip(multipleLabels, answers) {
+            label.text = answer.title
+        }
+    }
+    
+    private func nextQuestion() {
+        questionIndex += 1
+        
+        if questionIndex < questions.count {
+            updateUI()
+            return
+        }
+        
+        performSegue(withIdentifier: "showResult", sender: nil)
     }
 }
