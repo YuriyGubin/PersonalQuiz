@@ -12,12 +12,12 @@ class ResultViewController: UIViewController {
     @IBOutlet var animalLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     
-    var finalAnswers: [Answer] = []
+    var finalAnswers: [Answer]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.setHidesBackButton(true, animated: false)
-        calculateChosenAnimals()
+        getYourAnimal()
     }
     
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
@@ -27,7 +27,7 @@ class ResultViewController: UIViewController {
 
 // MARK: - Private Methods
 extension ResultViewController {
-    private func calculateChosenAnimals() {
+    private func getYourAnimal() {
         var chosenAnimals: [Animal: Int] = [:]
         let animals = finalAnswers.map { $0.animal }
         for animal in animals {
@@ -36,7 +36,7 @@ extension ResultViewController {
        
         if let yourAnimal = chosenAnimals.sorted(by: { $0.value > $1.value }).first?.key {
             animalLabel.text = "Вы - \(yourAnimal.rawValue)"
-            descriptionLabel.text = yourAnimal.definition + "\(finalAnswers)"
+            descriptionLabel.text = yourAnimal.definition
         }
         
     }
