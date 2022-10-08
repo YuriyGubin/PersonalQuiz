@@ -8,7 +8,7 @@
 import UIKit
 
 class QuestionsViewController: UIViewController {
-    
+    // MARK: - IBOutlets
     @IBOutlet var questionProgressView: UIProgressView!
     @IBOutlet var questionLabel: UILabel!
     
@@ -46,7 +46,7 @@ class QuestionsViewController: UIViewController {
         resultVC.finalAnswers = answersChosen
     }
 
-
+// MARK: - IBActions
     @IBAction func singleAnswerButtonPressed(_ sender: UIButton) {
         guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
         let currentAnswer = currentAnswers[buttonIndex]
