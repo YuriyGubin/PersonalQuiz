@@ -38,11 +38,6 @@ extension ResultViewController {
         
         guard let yourAnimal = chosenAnimals.sorted(by: { $0.value > $1.value }).first?.key else { return .rabbit}
         return yourAnimal
-       
-//        if let yourAnimal = chosenAnimals.sorted(by: { $0.value > $1.value }).first?.key {
-//            animalLabel.text = "Вы - \(yourAnimal.rawValue)"
-//            descriptionLabel.text = yourAnimal.definition
-//        }
     }
 }
 
