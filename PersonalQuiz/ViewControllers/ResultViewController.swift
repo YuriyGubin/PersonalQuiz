@@ -35,7 +35,6 @@ extension ResultViewController {
         for animal in animals {
             chosenAnimals[animal] = (chosenAnimals[animal] ?? 0) + 1
         }
-        
         guard let yourAnimal = chosenAnimals.sorted(by: { $0.value > $1.value }).first?.key else { return .rabbit}
         return yourAnimal
     }
