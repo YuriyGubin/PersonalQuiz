@@ -92,7 +92,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="BVh-ow-h2a" userLabel="Buttons">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="BVh-ow-h2a" userLabel="Buttons1">
                                 <rect key="frame" x="122.5" y="191" width="75" height="186"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwG-CQ-6UJ">
@@ -117,7 +117,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="N9B-e9-PlD" userLabel="Switchs">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="N9B-e9-PlD" userLabel="Switchs2">
                                 <rect key="frame" x="16" y="173" width="288" height="222.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mdM-70-egp">
@@ -183,7 +183,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Qgm-tr-Jox">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Qgm-tr-Jox" userLabel="Slider3">
                                 <rect key="frame" x="16" y="225.5" width="288" height="117"/>
                                 <subviews>
                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="oum-Cr-WjW">
@@ -213,25 +213,34 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tNj-TT-K0N">
+                                <rect key="frame" x="0.0" y="92.5" width="320" height="4"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sot-kp-j6H">
+                                <rect key="frame" x="16" y="104.5" width="288" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8u3-BQ-qlK"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="tNj-TT-K0N" firstAttribute="leading" secondItem="uZA-Yh-Cb5" secondAttribute="leading" id="2cj-xc-h8g"/>
                             <constraint firstItem="N9B-e9-PlD" firstAttribute="leading" secondItem="8u3-BQ-qlK" secondAttribute="leading" constant="16" id="CMo-KL-8Qz"/>
                             <constraint firstItem="Qgm-tr-Jox" firstAttribute="centerY" secondItem="uZA-Yh-Cb5" secondAttribute="centerY" id="E6D-24-r81"/>
                             <constraint firstItem="Qgm-tr-Jox" firstAttribute="leading" secondItem="8u3-BQ-qlK" secondAttribute="leading" constant="16" id="HYt-F8-YxY"/>
                             <constraint firstItem="8u3-BQ-qlK" firstAttribute="trailing" secondItem="Qgm-tr-Jox" secondAttribute="trailing" constant="16" id="NVg-s0-Zes"/>
                             <constraint firstItem="8u3-BQ-qlK" firstAttribute="trailing" secondItem="N9B-e9-PlD" secondAttribute="trailing" constant="16" id="ZsV-hR-qGp"/>
+                            <constraint firstItem="Sot-kp-j6H" firstAttribute="leading" secondItem="8u3-BQ-qlK" secondAttribute="leading" constant="16" id="cXM-Qx-oFE"/>
+                            <constraint firstItem="tNj-TT-K0N" firstAttribute="top" secondItem="uZA-Yh-Cb5" secondAttribute="topMargin" id="iBi-Qv-ff3"/>
+                            <constraint firstItem="8u3-BQ-qlK" firstAttribute="trailing" secondItem="Sot-kp-j6H" secondAttribute="trailing" constant="16" id="ie2-6R-5X5"/>
                             <constraint firstItem="BVh-ow-h2a" firstAttribute="centerX" secondItem="uZA-Yh-Cb5" secondAttribute="centerX" id="rhN-Uq-eHG"/>
                             <constraint firstItem="BVh-ow-h2a" firstAttribute="centerY" secondItem="uZA-Yh-Cb5" secondAttribute="centerY" id="uSu-2p-3uc"/>
+                            <constraint firstItem="Sot-kp-j6H" firstAttribute="top" secondItem="tNj-TT-K0N" secondAttribute="bottom" constant="8" symbolic="YES" id="wm2-HQ-xKB"/>
                             <constraint firstItem="N9B-e9-PlD" firstAttribute="centerY" secondItem="uZA-Yh-Cb5" secondAttribute="centerY" id="xoz-hM-tac"/>
+                            <constraint firstAttribute="trailing" secondItem="tNj-TT-K0N" secondAttribute="trailing" id="y3s-xg-DUD"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="BVh-ow-h2a"/>
-                                <exclude reference="N9B-e9-PlD"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Вопрос №" id="jcx-3v-iH8"/>
                     <connections>
@@ -240,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AnQ-Oc-ugI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2079" y="-7"/>
+            <point key="canvasLocation" x="2077.5" y="-7.394366197183099"/>
         </scene>
         <!--Результат-->
         <scene sceneID="Hbe-Ff-YwZ">
