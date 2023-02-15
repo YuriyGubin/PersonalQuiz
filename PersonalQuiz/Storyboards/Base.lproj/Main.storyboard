@@ -324,7 +324,13 @@
                             <constraint firstItem="voC-wx-Ec5" firstAttribute="centerY" secondItem="DgL-q9-t5e" secondAttribute="centerY" id="LEN-jd-Gbi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Результат" id="IOX-Jg-aBn"/>
+                    <navigationItem key="navigationItem" title="Результат" id="IOX-Jg-aBn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="het-7T-zXj">
+                            <connections>
+                                <action selector="doneButtonPressed:" destination="GLq-zj-Eu8" id="yln-4o-lKJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Onr-rs-kUV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
