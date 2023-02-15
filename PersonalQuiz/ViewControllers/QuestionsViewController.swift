@@ -98,7 +98,6 @@ extension QuestionsViewController {
     
     private func showCurrentAnswers(for type: ResponseType) {
         switch type {
-            
         case .single:
             showSingleStackView(with: currentAnswers)
         case .multiple:
@@ -114,7 +113,6 @@ extension QuestionsViewController {
         for (button, answer) in zip(singleButtons, answers) {
             button.setTitle(answer.title, for: .normal)
         }
-        
     }
     
     private func showMultipleStackView(with answers: [Answer]) {
