@@ -27,6 +27,4 @@ class ResultViewController: UIViewController {
 //    deinit {
 //        print("\(type(of: self)) has been deallocated")
 //    }
-    
-
 }
