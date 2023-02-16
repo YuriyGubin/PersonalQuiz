@@ -51,8 +51,25 @@ class ResultViewController: UIViewController {
             }
         }
         
-        let commonAnimals = animals.sorted { $0.value > $1.value }
-        let animal = commonAnimals.first?.key
+        // One line code for loop
+//        for animal in commonAnswers {
+//            animals[animal] = (animals[animal] ?? 0) + 1
+//        }
+        
+        // Most simple variant for loop
+//        for animal in commonAnswers {
+//            animals[animal, default: 0] += 1
+//        }
+        
+    // Whole task in one line
+//        let animal = Dictionary(grouping: answers) { $0.animal }
+//            .sorted { $0.value.count > $1.value.count }
+//            .first?.key
+        
+        
+        
+        let sortedAnimals = animals.sorted { $0.value > $1.value }
+        let animal = sortedAnimals.first?.key
         
 //        for (key, value) in animals {
 //            if value > maxValue {
