@@ -18,8 +18,8 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
-        iconLabel.text = "Вы - \(calculateCommonAnimal().rawValue)!"
-        descriptionLabel.text = calculateCommonAnimal().definition
+        iconLabel.text = "Вы - \(calculateCommonAnimal(fromAnsers: answers).rawValue)!"
+        descriptionLabel.text = calculateCommonAnimal(fromAnsers: answers).definition
     }
     
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
@@ -37,11 +37,12 @@ class ResultViewController: UIViewController {
 //        print("\(type(of: self)) has been deallocated")
 //    }
     
-    private func calculateCommonAnimal() -> Animal {
+    private func calculateCommonAnimal(fromAnsers answers: [Answer]) -> Animal {
         let commonAnswers = answers.map { $0.animal }
         
         var animal: Animal?
         var animals: [Animal: Int] = [:]
+        var maxValue = 0
         
         commonAnswers.forEach { animal in
             if let count = animals[animal] {
@@ -50,8 +51,6 @@ class ResultViewController: UIViewController {
                 animals[animal] = 1
             }
         }
-        
-        var maxValue = 0
         
         for (key, value) in animals {
             if value > maxValue {
