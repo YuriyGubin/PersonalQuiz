@@ -9,12 +9,17 @@ import UIKit
 
 class ResultViewController: UIViewController {
     
+    
+    @IBOutlet var iconLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
+    
     var answers: [Answer]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.hidesBackButton = true
-        calculateCommonAnimal()
+        iconLabel.text = "Вы - \(calculateCommonAnimal().rawValue)!"
+        descriptionLabel.text = calculateCommonAnimal().definition
     }
     
     @IBAction func doneButtonPressed(_ sender: UIBarButtonItem) {
